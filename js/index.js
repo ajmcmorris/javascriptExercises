@@ -15,8 +15,7 @@ window.onload = function(){
 				}
 				if (i % 5 === 0){
 					output += "buzz";
-				}
-				
+				}				
 				console.log(output || i);
 			}
 		}
@@ -43,5 +42,33 @@ window.onload = function(){
 		//fizzBuzz();
 		chessBoard();
 	}
-	programStructure();
+	function writingFunctions (){
+
+		function min(a,b){
+			if (a < b){
+				return console.log(a);
+			}
+			else{
+				return console.log(b);
+			}
+		}
+		function isEven(number){
+			if (number % 2 ===0){
+				return console.log(true);
+			}
+			else if (number % 2 ===1){
+				return console.log(false);
+			}
+			else if(number < 0){
+				return console.log(isEven(-number));
+			}
+			else{
+				return console.log(isEven(number - 2));
+			}
+		}
+		//min(5,100);
+		isEven(-1);
+	}
+	writingFunctions();
+	//programStructure();
 };
