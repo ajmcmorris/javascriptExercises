@@ -38,8 +38,8 @@ window.onload = function(){
 			}
 			console.log(board);
 		}
-		//loopTriangle();
-		//fizzBuzz();
+		loopTriangle();
+		fizzBuzz();
 		chessBoard();
 	}
 	function writingFunctions (){
@@ -82,10 +82,39 @@ window.onload = function(){
 		function findChar(index){
 			return index;
 		}
-		//min(5,100);
-		//isEven(-1);
+		min(5,100);
+		isEven(-1);
 		countResults();
 	}
-	writingFunctions();
+	function dataStructure(){
+
+		function range(start,end,step){
+			var rangeray = [];
+			if(step == undefined){
+				for(var i = start; i <= end; i++){
+					rangeray.push(i);
+				}
+			}
+			else{
+				for(start; start <=end; start+=step){
+					rangeray.push(start);
+				}
+			}
+			return console.log(rangeray);
+		}
+
+		 function sumArray(array){
+			var sum = 0;
+			for(var a = 0; a < array.length; a++){
+				sum += array[a];
+			}
+			return console.log(sum);
+		}
+		
+		range(1,10,2);
+	}
+
+	dataStructure();
+	//writingFunctions();
 	//programStructure();
 };
