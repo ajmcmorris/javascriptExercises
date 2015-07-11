@@ -67,21 +67,24 @@ window.onload = function(){
 			}
 		}
 
-		function count(){
-			return countChar("Hello",'l');
+		function countResults(){
+			return countString("Hello");
 		}
-		function countChar(string,index){
+		function countString(string){
 			var character = [];
 			for(var i = 0; i < string.length; i++){
-				if(string.charAt(i) == index){
+				if(string.charAt(i) == findChar('l')){
 					character.push(string.charAt(i));
 				}
 			}
 			return console.log(character.length);
 		}
+		function findChar(index){
+			return index;
+		}
 		//min(5,100);
 		//isEven(-1);
-		count();
+		countResults();
 	}
 	writingFunctions();
 	//programStructure();
