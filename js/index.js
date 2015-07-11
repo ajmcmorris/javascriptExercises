@@ -66,8 +66,22 @@ window.onload = function(){
 				return console.log(isEven(number - 2));
 			}
 		}
+
+		function count(){
+			return countChar("Hello",'l');
+		}
+		function countChar(string,index){
+			var character = [];
+			for(var i = 0; i < string.length; i++){
+				if(string.charAt(i) == index){
+					character.push(string.charAt(i));
+				}
+			}
+			return console.log(character.length);
+		}
 		//min(5,100);
-		isEven(-1);
+		//isEven(-1);
+		count();
 	}
 	writingFunctions();
 	//programStructure();
