@@ -104,19 +104,27 @@ window.onload = function(){
 				for(start; start <=end; start+=step){
 					rangeray.push(start);
 				}
-			}	   //change to sumArray to compute sum of range of numbers
-			return console.log(rangeray);
+			}	   //change console.log to sumArray to compute sum of range of numbers
+				  // or to reverseArray to reverse array order
+			return reverseArray(rangeray);
 		}
-
 		 function sumArray(array){
 			var sum = 0;
 			for(var a = 0; a < array.length; a++){
 				sum += array[a];
 			}
 			return console.log(sum);
+		}
+
+		function reverseArray(array){
+			var reversedArray = [];
+			for(var i = 0, len = array.length -1; i <= len; i++){
+				reversedArray.push(array.pop(i));
+			}
+			return console.log(reversedArray);	
 		}	
 		//negative test
-		range(10,2,-3);
+		//range(10,2,-3);
 		//positive test
 		range(1,12,3);
 	}
