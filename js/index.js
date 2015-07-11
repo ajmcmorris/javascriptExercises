@@ -95,11 +95,16 @@ window.onload = function(){
 					rangeray.push(i);
 				}
 			}
+			else if(step < 0){
+				for(end; end <=start; end-=step){
+					rangeray.push(end);
+				}
+			}
 			else{
 				for(start; start <=end; start+=step){
 					rangeray.push(start);
 				}
-			}
+			}	   //change to sumArray to compute sum of range of numbers
 			return console.log(rangeray);
 		}
 
@@ -109,9 +114,11 @@ window.onload = function(){
 				sum += array[a];
 			}
 			return console.log(sum);
-		}
-		
-		range(1,10,2);
+		}	
+		//negative test
+		range(10,2,-3);
+		//positive test
+		range(1,12,3);
 	}
 
 	dataStructure();
