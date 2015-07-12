@@ -122,6 +122,34 @@ window.onload = function(){
 				reversedArray.push(array.pop(i));
 			}
 			return console.log(reversedArray);	
+		}
+		function arrayToList(array){
+			var list = null;
+			for(var i = 0,len = array.length; i < len; i++){
+				list = {value:len[i],rest:list};
+			}
+			return list;
+		}
+		function listToArray(list){
+			var listRAy = [];
+			for each(item in list){
+				listRAy.push(item);
+			}
+			return listRAy;
+		}
+		function prepend(value,list){
+			return {value:value,rest:list};
+		}
+		function nth(number,list){
+			if(!list){
+				return undefined;
+			}
+			else if (number == 0){
+				return list.value;
+			}
+			else{
+				return nth(list.rest,n -1);
+			}
 		}	
 		//negative test
 		//range(10,2,-3);
