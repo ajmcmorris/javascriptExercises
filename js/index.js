@@ -90,7 +90,7 @@ window.onload = function(){
 
 		function range(start,end,step){
 			var rangeray = [];
-			if(step == undefined){
+			if(step === undefined){
 				for(var i = start; i <= end; i++){
 					rangeray.push(i);
 				}
@@ -132,7 +132,8 @@ window.onload = function(){
 		}
 		function listToArray(list){
 			var listRAy = [];
-			for each(item in list){
+			var item;
+			for(item in list){
 				listRAy.push(item);
 			}
 			return listRAy;
@@ -140,21 +141,40 @@ window.onload = function(){
 		function prepend(value,list){
 			return {value:value,rest:list};
 		}
-		function nth(number,list){
+		function nth(list,number){
 			if(!list){
 				return undefined;
 			}
-			else if (number == 0){
+			else if (number === 0){
 				return list.value;
 			}
 			else{
-				return nth(list.rest,n -1);
+				return nth(list.rest,number -1);
 			}
-		}	
+		}
+		function deepEqual(value1,value2){
+			if(typeof value1 === "object" && typeof value2 === "object"){
+				if (value1 === value2){
+					return console.log(true);
+				}
+				else{
+					return console.log(false);
+				}
+			}
+			else if(value1 === value2){
+				return console.log(true);
+			}
+			else{
+				return console.log(false);
+			}
+		}		
 		//negative test
 		//range(10,2,-3);
 		//positive test
-		range(1,12,3);
+		//range(1,12,3);
+		var darth ={value:1,model:"n"};
+		var maul = darth;
+		deepEqual(darth,maul);
 	}
 
 	dataStructure();
